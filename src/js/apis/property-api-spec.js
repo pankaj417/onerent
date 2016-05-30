@@ -387,5 +387,4 @@ describe('Client-Side Todo API', () => {
       expect(successFn).not.to.have.been.called;
     });
   });
-
 });
