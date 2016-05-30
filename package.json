@@ -1,7 +1,7 @@
 {
-  "name": "react-node-project-seed",
+  "name": "onerent",
   "version": "0.2.0",
-  "description": "React + Node, with Flux, Express, and MongoDB",
+  "description": "Onerent React + Node, with Flux, Express",
   "engines": {
     "iojs": "1.2.x",
     "npm": "2.5.x"
@@ -42,8 +42,6 @@
     "karma-sinon-chai": "0.3.2",
     "karma-webpack": "1.5.1",
     "mocha": "2.2.5",
-    "mocha-mongoose": "1.0.3",
-    "mongodb": "1.4.30",
     "node-libs-browser": "0.5.2",
     "react-hot-loader": "1.2.8",
     "rewire": "2.3.4",
@@ -72,8 +70,6 @@
     "jquery": "2.1.4",
     "less-loader": "2.0.0",
     "lodash": "3.10.0",
-    "mongodb-uri": "0.9.7",
-    "mongoose": "4.0.6",
     "morgan": "1.6.1",
     "node-libs-browser": "0.5.2",
     "object-assign": "2.1.1",
@@ -84,6 +80,5 @@
     "style-loader": "0.12.3",
     "webpack": "1.10.1",
     "node-rest-client": "1.8.0"
-
   }
 }
