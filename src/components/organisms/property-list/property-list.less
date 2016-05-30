@@ -1,0 +1,48 @@
+@import '../../../stylesheets/common';
+.property-container {
+    text-align:left;
+    width:100%;
+      .card {
+      	width:100%;
+      }
+	.property-block {
+		vertical-align: top;
+		.card { 
+			display: block;
+			width: 100%;	
+			min-width:100%;
+		} 
+	 	padding : 1rem 0.5rem;
+	 	display : inline-block;
+		@media @desktop {
+			width:33%;
+		}
+		@media @tablet {
+			width:50%;
+		}
+		@media @phone {
+			width:100%;
+		}
+		.address {
+			color : #666;
+			font-size: 14px;
+			padding:7px 5px 15px 5px;
+			
+		}
+		.h-seperator {
+			margin: 5px 0;
+			border-top:1px solid @accent;
+			height:1px;
+			width:100%;
+		}
+		.price {
+			color : @accent;
+			text-align: right;
+			font-size: 16px;
+			padding:15px 5px 15px 7px;
+		}
+		.description {
+		    font-size: 12px;
+		}
+	}
+}
