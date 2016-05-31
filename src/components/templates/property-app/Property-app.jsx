@@ -11,7 +11,7 @@ import PropertyList from '../../organisms/property-list/property-list.jsx';
 
 const PropertyApp = React.createClass({
   getInitialState: function() {
-    console.log("getInitialState");
+   // console.log("getInitialState");
     return ({ 
       properties: PropertyStore.getAll(),
       showLoader: PropertyStore.getLoader(),
@@ -20,7 +20,7 @@ const PropertyApp = React.createClass({
   },
 
   componentDidMount: function() {
-    console.log("componentDidMount"+this.state.showLoader);
+    //console.log("componentDidMount"+this.state.showLoader);
     PropertyStore.addChangeListener(this._onChange);
     
     // fetch the initial list of properties from the server
@@ -28,20 +28,20 @@ const PropertyApp = React.createClass({
   },
 
   componentWillUnmount: function() {
-     console.log("componentWillUnmount");
+     //console.log("componentWillUnmount");
     PropertyStore.removeChangeListener(this._onChange);
   },
 
   _onChange: function() {
-     console.log("_onChange loader before "+this.state.showLoader);
-     console.log("_onChange norecord before "+this.state.noRecord);
+     //console.log("_onChange loader before "+this.state.showLoader);
+     //console.log("_onChange norecord before "+this.state.noRecord);
     this.setState({ 
       properties: PropertyStore.getAll(),
       showLoader: PropertyStore.getLoader(),
       noRecord: PropertyStore.getNoRecord()
     });
-    console.log("checking_onChange loader after "+this.state.showLoader);
-    console.log("checking_onChange norecord after "+this.state.noRecord);
+    //console.log("checking_onChange loader after "+this.state.showLoader);
+   // console.log("checking_onChange norecord after "+this.state.noRecord);
   },
 
   render: function() {

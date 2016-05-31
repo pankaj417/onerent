@@ -6,7 +6,7 @@ import PropertyApi from '../apis/property-api';
 dispatcher (which routes in on to the store), and to interface with the Api */
 const AppActions = {
   getProperties: function() {
-       console.log('getProperties');
+       //console.log('getProperties');
     AppDispatcher.handleViewAction({
       actionType: AppConstants.GET_PROPERTIES
     });
@@ -24,7 +24,7 @@ const AppActions = {
     });
   },
   searchProperties: function(searchObject) {
-    console.log('searchProperties');
+    //console.log('searchProperties');
     if(searchObject.searchText=='') {
       AppDispatcher.handleViewAction({
          actionType: AppConstants.GET_PROPERTIES
