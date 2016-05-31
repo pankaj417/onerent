@@ -71,7 +71,7 @@ Given the current shortcomings of Jest, it's my opinion that this recipe represe
 
 Since we don't have the benefit of Jest's automocking with this setup, we'll have to handle mocking on our own. Thankfully Sinon and Rewire make this easy. A simple [helper module](../test/helpers/rewire-module.js) facilitates mocking and testing of calls to external dependencies with Sinon or replacing child React components with dummy ones possible with very little code ([example here](../tests/todo-item-spec.jsx)).
 
-## Todo
+## Todo's and Scope of Improvements 
 1.  Loader before displaying properties 
 2.  Sorting
 3.  Searching on all images label
