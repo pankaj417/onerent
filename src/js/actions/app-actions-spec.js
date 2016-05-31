@@ -3,7 +3,6 @@ import AppDispatcher from '../dispatcher/app-dispatcher';
 import PropertyApi from '../apis/property-api';
 
 describe('AppActions', () => {
-  let todo = {id: '1', name: 'foo', completed: 'false'};
 
   beforeEach(() => {
     sinon.stub(AppDispatcher, 'handleViewAction');

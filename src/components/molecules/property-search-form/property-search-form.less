@@ -1,7 +1,12 @@
 @import '../../../stylesheets/common';
 
+
+
 .propertyForm {
-  text-align:left;
+  text-align:center;
+  @media @desktop {
+    text-align:left;
+  }
   padding : 1rem 0.5rem 0 0.5rem;
   min-height: 69px;
   position: relative;
@@ -14,18 +19,36 @@
   form {
     width: 100%;
   }
+  .filter {
+   font-size: 1.2rem;
+   font-weight:normal;
+   color: @accent;
+  }
   .input-submit {
+    padding-top:1rem;
     position: absolute;
     left: 80%;
     bottom: 4%;
   }
   .input-text {
-    width: 82%;
+      width: 100%;
+      margin : 1rem 0;
+  } 
+  @media @desktop {
+    .input-submit {
+      position: absolute;
+      bottom: 4%;
+    }
+    .input-text {
+      width: 77%;
+      margin :  0;
+    }
+    .filter { 
+     padding-right: 1rem;
+    }
   }
-  .filter {
-   padding-right: 1rem;
-   font-size: 1.2rem;
-   font-weight:normal;
-   color: @accent;
-  }
+
+
+
+
 }

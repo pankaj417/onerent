@@ -7,6 +7,8 @@ import assign from 'object-assign';
 const CHANGE_EVENT = 'change';
 
 let _properties = {};
+let _loader = 'show';
+let _noRecord = 'hide';
 let _filteredProperties = {};
 
 // Our client-side CRUD methods for Todos:
@@ -23,10 +25,21 @@ function createAll (properties) {
      property.synced = true;
     _properties[property.id] = property;
   });
+  _loader = 'hide';
   resetFilter();
 }
 function resetFilter() {
   _filteredProperties=_properties;
+  setNoRecord();
+}
+function setNoRecord() {
+  console.log("property Count" + Object.keys(_filteredProperties).length);
+  if(Object.keys(_filteredProperties).length==0 && _loader=="hide") {
+     _noRecord = 'show';
+    console.log("I am inside Property Count 0 : " + Object.keys(_filteredProperties).length) 
+  } else {
+     _noRecord = 'hide';
+  }
 }
 function filterProperties (searchObject) {
   console.log("searchObject ");
@@ -75,6 +88,7 @@ function filterProperties (searchObject) {
 
         });
      }
+     setNoRecord();
      console.log("after filter apply");
      console.log(_filteredProperties);
     //   _filteredProperties = Object.keys(_properties).filter(
@@ -127,6 +141,12 @@ const PropertyStore = assign({}, EventEmitter.prototype, {
     console.log(_filteredProperties);
     return _filteredProperties;
   },
+  getLoader: function() {
+    return  _loader;
+  },
+  getNoRecord: function () {
+     return  _noRecord;
+  }
 });
 
 /* Register with the App Dispatcher, and declare how the store handles various
