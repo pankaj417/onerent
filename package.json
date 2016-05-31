@@ -9,7 +9,7 @@
   "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "http://github.com/mattpetrie/react-node-project-seed.git"
+    "url": "https://github.com/pankaj417/onerent.git"
   },
   "scripts": {
     "postinstall": "gulp build:production",

@@ -81,22 +81,11 @@ function filterProperties (searchObject) {
               //  }
           }
 
-          // if(_properties[property].address.toLowerCase().indexOf(
-          //     searchObject.searchText.toLowerCase()) !== -1) {
-          //     _filteredProperties[property] = _properties[property];
-          // }   
-
         });
      }
      setNoRecord();
      console.log("after filter apply");
      console.log(_filteredProperties);
-    //   _filteredProperties = Object.keys(_properties).filter(
-    //   (property) => {
-    //     return _properties[property].name.toLowerCase().indexOf(
-    //     searchObject.searchText.toLowerCase()) !== -1;
-    //   }
-    // );
 }
 
 function destroy (id) {
