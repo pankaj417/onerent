@@ -11,7 +11,7 @@ import assign from 'object-assign';
 
 const AppDispatcher = assign(new Dispatcher(), {
   handleViewAction: function(action) {
-    console.log('view action', action);
+    //console.log('view action', action);
     this.dispatch({
       source: 'VIEW_ACTION',
       action: action
@@ -19,7 +19,7 @@ const AppDispatcher = assign(new Dispatcher(), {
   },
 
   handleServerAction: function(action) {
-    console.log('server action', action);
+    //console.log('server action', action);
     this.dispatch({
       source: 'SERVER_ACTION',
       action: action

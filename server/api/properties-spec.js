@@ -1,6 +1,6 @@
 import request from 'supertest';
 import server from '../server';
-import todos from './properties';
+import properties from './properties';
 
 var app;
 
@@ -19,43 +19,21 @@ describe('Properties API /api/properties', () => {
   beforeEach((done) => {
     // listen on a different port from out app, so test watch mode doesn't conflict
     app = server.listen(9000);
+    return done();
   });
-
   afterEach( () => {
     app.close();
   });
 
+
   describe('GET /api/properties/', () => {
-    it('responds with status 200 when Todo is valid', (done) => {
+    let allProperties = [];
+    it('responds with all of the properties', (done) => {
       request(app)
-        .get('/api/properties/')
-        .send({
-          id: generateUUID(),
-          completed: false,
-          name: 'foo'
-        })
-        .expect(200, done);
-    });
+      .get('/api/properties/')
+      .expect(200, done);
+    }).timeout(10000);
 
-    // it('responds with a status 400 when required fields are missing', (done) => {
-    //   request(app)
-    //     .post('/api/properties/')
-    //     .send({
-    //       id: generateUUID()
-    //     })
-    //     .expect(400, done);
-    // });
-
-    // it('responds with a status 400 when id is not valid', (done) => {
-    //   request(app)
-    //     .post('/api/properties/')
-    //     .send({
-    //       id: '1',
-    //       name: 'foo',
-    //       completed: false
-    //     })
-    //     .expect(400, done);
-    // });
   });
 
 
